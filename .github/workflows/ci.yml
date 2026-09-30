@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  cask:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      # Also taps this checkout as sergioarojasm98/tap
+      - uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Style
+        run: brew style --cask sergioarojasm98/tap/freeleapp
+
+      # Checks the url and checksum end to end; the app is not launched
+      - name: Install
+        run: |
+          brew install --cask sergioarojasm98/tap/freeleapp
+          test -d /Applications/Freeleapp.app
