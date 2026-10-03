@@ -26,9 +26,4 @@ cask "freeleapp" do
     "~/Library/Preferences/io.github.sergioarojasm98.freeleapp.plist",
     "~/Library/Saved Application State/io.github.sergioarojasm98.freeleapp.savedState",
   ]
-
-  caveats <<~EOS
-    Freeleapp is not notarized yet, so macOS blocks its first launch. Clear the quarantine flag once:
-      xattr -dr com.apple.quarantine #{appdir}/Freeleapp.app
-  EOS
 end

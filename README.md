@@ -12,13 +12,7 @@ brew install --cask sergioarojasm98/tap/freeleapp
 |------|-----|
 | `freeleapp` | [Freeleapp](https://github.com/sergioarojasm98/freeleapp): desktop app for temporary AWS and Azure credentials, based on Leapp |
 
-Freeleapp is ad-hoc signed and not notarized yet, so macOS blocks its first launch. Clear the quarantine flag once after installing:
-
-```bash
-xattr -dr com.apple.quarantine /Applications/Freeleapp.app
-```
-
-Freeleapp updates itself from the app. To upgrade through Homebrew instead, use `brew upgrade --cask --greedy freeleapp`.
+Freeleapp is signed with a Developer ID and notarized by Apple, and it updates itself from the app. To upgrade through Homebrew instead, use `brew upgrade --cask --greedy freeleapp`.
 
 ## Uninstall
 
