@@ -1,6 +1,6 @@
 cask "freeleapp" do
-  version "1.3.1"
-  sha256 "49ada62199c04133e4b11270a3c7e85c717f0a82f40510052da55a5b89ca463c"
+  version "1.3.2"
+  sha256 "6694dda76fce7c94bdef4854ef59ec91a2adaa8e3ad5ff1c933216654d12da5a"
 
   url "https://github.com/sergioarojasm98/freeleapp/releases/download/v#{version}/Freeleapp-#{version}-arm64.dmg"
   name "Freeleapp"
